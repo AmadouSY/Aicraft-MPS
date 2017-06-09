@@ -1,0 +1,3 @@
+Description test 1,periodicity test 1 ,ata test 1,true,5,Canadair RJ 1000
+Description test 1,periodicity test 1 ,ata test 2,true,5,Airbus 380
+description of the task,Once per day,Power plant (ATA 70-92),true,5,Boeing 737

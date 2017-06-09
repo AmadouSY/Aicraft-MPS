@@ -1,0 +1,454 @@
+## NOTE :
+## Comment always start with ## in our query file
+## URL must be : <database_name>/<table_name>/<key_id>
+
+##CETTE FONCTION NE MARCHE PAS
+##POUR UN PREMIER LANCEMENT
+## Clean database first
+POST gla/_delete_by_query
+{
+  "query": { "match_all" : { } }
+}
+
+## Start filling up database simulation
+PUT gla/mcc/1
+{ 
+  "email" : "quincy.tw@gmail.com",
+  "pass" : "pass"
+}
+
+PUT gla/mcc/2
+{ 
+  "email" : "fekih.meriem2@gmail.com",
+  "pass" : "blabla"
+}
+
+PUT gla/mcc/3
+{
+  "email" : "skaba1606@gmail.com",
+  "pass" : "blabla"
+}
+
+PUT gla/mcc/4
+{
+  "email" : "Hamadikrimo@hotmail.com",
+  "pass" : "blabla"
+}
+
+PUT gla/mcc/5
+{
+  "email" : "yazid_lefoot@hotmail.fr",
+  "pass" : "blabla"
+}
+
+PUT gla/mcc/6
+{
+  "email" : "judeIngani@gmail.com",
+  "pass" : "blabla"
+}
+
+PUT gla/mcc/7
+{
+  "email" : "amadous75@gmail.com",
+  "pass" : "blabla"
+}
+
+PUT gla/mcc/8
+{
+  "email" : "mohamed.diallo93.md@gmail.com",
+  "pass" : "blabla"
+  
+}
+
+PUT gla/mcc/9
+{
+  "email" : "binta.dbr@gmail.com",
+  "pass" : "blabla"
+}
+
+
+## Reference for MRO qualification : https://en.wikipedia.org/wiki/Reliability_engineering
+PUT gla/mro/1
+{
+ "qualification" : "Predictive and preventive maintenance (e.g. reliability-centered maintenance)",
+ "name" : "Oulebsir",
+ "surname" : "Hocine",
+ "email" : "yazid_lefoot@hotmail.fr"
+}
+
+PUT gla/mro/2
+{
+ "qualification" : "Functional system failure analysis and derived requirements specification",
+ "name" : "Kaba",
+ "surname" : "Sarah",
+ "email" : "skaba1606@gmail.com"
+}
+ 
+PUT gla/mro/3
+{
+ "qualification" : "System availability and mission readiness analysis and related reliability and maintenance requirement allocation",
+ "name" : "Hsieh",
+ "surname" : "Quincy",
+  "email" : "quincy.tw@gmail.com" 
+}
+
+PUT gla/mro/4
+{
+ "qualification" : "Inherent (system) Design Reliability Analysis and derived requirements specification for both Hardware and Software design",
+ "name" : "Meriem",
+ "surname" : "Fekih",
+ "email":"fekih.meriem2@gmail.com" 
+}
+
+PUT gla/mro/5
+{
+ "qualification" : "System Diagnostics design",
+ "name" : "Krimo",
+ "surname" : "Hamadi",
+ "email" : "Hamadikrimo@hotmail.com"
+}
+
+PUT gla/mro/6
+{
+ "qualification" : "Fault tolerant systems (e.g. by redundancy)",
+ "name" : "mohamed",
+ "surname" : "Diallo",
+ "email" : "mohamed.diallo93.md@gmail.com"
+}
+
+PUT gla/mro/7
+{
+ "qualification" : "Human factors / Human interaction / Human errors",
+ "name" : "Jude",
+ "surname" : "Ingani",
+ "email" : "judeIngani@gmail.com"
+}
+
+PUT gla/mro/8
+{
+ "qualification" : "Manufacturing- and Assembly-induced failures (effect on the detected 0-hour Quality and reliability)",
+ "name" : "Amadou",
+ "surname" : "Sy",
+ "email" : "amadous75@gmail.com"
+}
+
+PUT gla/mro/9
+{
+ "qualification" : "Failure / reliability testing (and derived requirements)",
+ "name" : "Bdiabi",
+ "surname" : "Diabira",
+ "email" : "binta.dbr@gmail.com"
+}
+ 
+PUT gla/plane/1
+{
+ 	"planetype" : "Airbus A380"
+}
+ 
+PUT gla/plane/2
+{
+ 	"planetype" : "Boeing 737"
+}
+ 
+PUT gla/plane/3
+{
+ 	"planetype" : "Canadair RJ 1000"
+}
+
+PUT gla/plane/4
+{
+ 	"planetype" : "Boeing 777"
+}
+
+PUT gla/plane/5
+{
+ 	"planetype" : "Airbus A380"
+}
+
+PUT gla/plane/6
+{
+ 	"planetype" : "Airbus A319"
+}
+
+PUT gla/flight/1
+{
+ 	"planeId" : "1",
+ 	"commercialId" : "AF7724",
+	"departureAirport" : "Paris-CDG",
+	"arrivalAirport" : "Nantes-NTE",
+	"departureTime" : "2017/06/02 09:40",
+	"arrivalTime" : "2017/06/02 10:40"
+}
+ 
+PUT gla/flight/2
+{
+    "planeId" : "2",
+ 	"commercialId" : "AF1134",
+	"departureAirport" : "Paris-CDG",
+	"arrivalAirport" : "Berlin-TXL",
+	"departureTime" : "2017/12/24 09:15",
+	"arrivalTime" : "2017/12/24 10:45"
+}
+ 
+PUT gla/flight/3
+{
+    "planeId" : "3",
+ 	"commercialId" : "BR88",
+	"departureAirport" : "Taipei-TPE",
+	"arrivalAirport" : "Paris-CDG",
+	"departureTime" : "2017/05/20 23:00",
+	"arrivalTime" : "2017/05/21 11:00"
+}
+ 
+PUT gla/flight/4
+{
+    "planeId" : "4",
+ 	"commercialId" : "EK72",
+	"departureAirport" : "Paris-CDG",
+	"arrivalAirport" : "Dubaï-DXB",
+	"departureTime" : "2017/06/20 23:00",
+	"arrivalTime" : "2017/06/21 06:30"
+}
+ 
+PUT gla/flight/5
+{
+    "planeId" : "5",
+ 	"commercialId" : "JAL216",
+	"departureAirport" : "Paris-CDG",
+	"arrivalAirport" : "Tokyo-HND",
+	"departureTime" : "2017/06/01 23:00",
+	"arrivalTime" : "2017/06/02 11:00"
+}
+ 
+PUT gla/task/1
+{
+ "startTime" : "2017/06/02 06:40",
+ "endTime" : "2017/06/02 07:40",
+ "idTaskGeneric" : "1",
+ "planeId" : "1",
+ "taskStatus" : "0",
+ "mroId" : "-1",
+ "mccId" : "1"
+}
+
+
+PUT gla/task/2
+{
+ "startTime" : "2017/12/24 06:15",
+ "endTime" : "2017/12/24 08:15",
+ "idTaskGeneric" : "5",
+ "planeId" : "2",
+ "taskStatus" : "2",
+ "mroId" : "3",
+ "mccId" : "1"
+}
+
+PUT gla/task/3
+{
+ "startTime" : "2017/05/20 20:00",
+ "endTime" : "2017/05/20 21:15",
+ "idTaskGeneric" : "4",
+ "planeId" : "3",
+ "taskStatus" : "2",
+ "mroId" : "1",
+ "mccId" : "3"
+}
+
+PUT gla/task/4
+{
+ "startTime" : "2017/05/20 20:45",
+ "endTime" : "2017/05/20 21:45",
+ "idTaskGeneric" : "3",
+ "planeId" : "3",
+ "taskStatus" : "0",
+ "mroId" : "-1",
+ "mccId" : "4"
+}
+
+PUT gla/task/5
+{
+ "startTime" : "2017/05/20 20:15",
+ "endTime" : "2017/05/20 21:30",
+ "idTaskGeneric" : "2",
+ "planeId" : "3",
+ "taskStatus" : "2",
+ "mroId" : "2",
+ "mccId" : "2"
+}
+
+PUT gla/task/6
+{
+ "startTime" : "2017/06/01 22:00",
+ "endTime" : "2017/06/02 00:30",
+ "idTaskGeneric" : "1",
+ "planeId" : "1",
+ "taskStatus" : "2",
+ "mroId" : "1",
+ "mccId" : "3"
+}
+
+PUT gla/task/7
+{
+ "startTime" : "2017/12/23 23:00",
+ "endTime" : "2017/12/24 01:40",
+ "idTaskGeneric" : "1",
+ "planeId" : "2",
+ "taskStatus" : "0",
+ "mroId" : "-1",
+ "mccId" : "4"
+}
+
+PUT gla/task/8
+{
+ "startTime" : "2017/06/20 20:00",
+ "endTime" : "2017/06/20 20:40",
+ "idTaskGeneric" : "1",
+ "planeId" : "3",
+ "taskStatus" : "0",
+ "mroId" : "-1",
+ "mccId" : "5"
+}
+
+PUT gla/task/9
+{
+ "startTime" : "2017/06/20 10:00",
+ "endTime" : "2017/06/20 13:00",
+ "idTaskGeneric" : "1",
+ "planeId" : "4",
+ "taskStatus" : "0",
+ "mroId" : "-1",
+ "mccId" : "6"
+}
+
+PUT gla/task/10
+{
+ "startTime" : "2017/06/01 16:00",
+ "endTime" : "2017/06/01 18:30",
+ "idTaskGeneric" : "1",
+ "planeId" : "5",
+ "taskStatus" : "0",
+ "mroId" : "-1",
+ "mccId" : "7"
+}
+
+PUT gla/task/11
+{
+ "startTime" : "2017/06/02 19:15",
+ "endTime" : "2017/06/02 21:15",
+ "idTaskGeneric" : "1",
+ "planeId" : "6",
+ "taskStatus" : "0",
+ "mroId" : "-1",
+ "mccId" : "8"
+}
+
+PUT gla/task/12
+{
+ "startTime" : "2017/06/02 19:15",
+ "endTime" : "2017/06/02 21:15",
+ "idTaskGeneric" : "1",
+ "planeId" : "6",
+ "taskStatus" : "1",
+ "mroId" : "1",
+ "mccId" : "9"
+}
+
+PUT gla/taskgeneric/1
+{
+ "description" : "5300   Fuselage Structure (General) : For reports of structural units and associated components and members which make up the compartments for crew, passengers, equipment, cargo, plus the structure of the envelope and gondola of airships.",
+ "periodicity" : "Once per day",
+ "ataCategory" : "Power plant (ATA 70-92)",
+ "hangarNeed" : "true",
+ "duration" : "1",
+ "planeType" : "Airbus A380"
+ }
+ 
+PUT gla/taskgeneric/2
+{
+ "description" : "6100   Propeller System : The complete mechanical or electrical propeller, governor, alternators, pumps, motors those units and components external to or integral with the engine used to control the propeller blade angle. Includes the propulsor duct assemblies, aerodynamic fairing of mechanical components, stators, vectoring systems, etc. Use this code for reports with insufficient information to file in a more specific JASC 6100 series code.",
+ "periodicity" : "Once per day",
+ "ataCategory" : "Propeller/rotor (ATA 60-67)",
+ "hangarNeed" : "true", 
+ "duration" : "1.5",
+ "planeType" : "Airbus A380"
+ }
+ 
+PUT gla/taskgeneric/3
+{
+ "description" : "3130   Data Recorders (Flight/Maintenance) : The unit which continuously records critical flight, aircraft and powerplant system data, such as attitude, air speed, altitude, engine power, etc., to be used in the event of a crash. Includes the system and parts that provide a source of power and inputs, from various sources critical to flight, to flight data recorder. Typical parts are spool rod, magazine, etc.",
+ "periodicity" : "Each flight",
+ "ataCategory" : "Aircraft General (ATA 00-18)",
+ "hangarNeed" : "false",
+ "duration" : "0.5",
+ "planeType" : "Airbus A380"
+}
+
+PUT gla/taskgeneric/4
+{
+ "description" : "2100   Air Conditioning System : For miscellaneous parts that cannot be associated with specific air conditioning, pressurization, or distribution codes. Examples are lines, hoses, etc., with no reference to the specific using system on the incoming report. Also, for those units and components furnishing a means of pressurizing, heating, cooling, moisture controlling, filtering, and treating the air used to ventilate areas of the fuselage within the pressure vessel.",
+ "periodicity" : "Each flight",
+ "ataCategory" : "Airframe systems (ATA 20-50)",
+ "hangarNeed" : "true",
+ "duration" : "1",
+ "planeType" : "Airbus A380"
+}
+
+PUT gla/taskgeneric/5
+{
+ "description" : "5101   Aircraft Structures : For reports of aircraft structural problems of a general nature which affects two or more areas. Includes reports of lightning strikes which cannot be associated with a specific JASC code.",
+ "periodicity" : "Every week",
+ "ataCategory" : "Structure (ATA 51-57)",
+ "hangarNeed" : "true",
+ "duration" : "2",
+ "planeType" : "Airbus A380"
+}
+
+PUT gla/taskgeneric/6
+{
+ "description" : "5300   Fuselage Structure (General) : For reports of structural units and associated components and members which make up the compartments for crew, passengers, equipment, cargo, plus the structure of the envelope and gondola of airships.",
+ "periodicity" : "Once per day",
+ "ataCategory" : "Power plant (ATA 70-92)",
+ "hangarNeed" : "true",
+ "duration" : "1.5",
+ "planeType" : "Boeing 777"
+ }
+ 
+PUT gla/taskgeneric/7
+{
+ "description" : "6100   Propeller System : The complete mechanical or electrical propeller, governor, alternators, pumps, motors those units and components external to or integral with the engine used to control the propeller blade angle. Includes the propulsor duct assemblies, aerodynamic fairing of mechanical components, stators, vectoring systems, etc. Use this code for reports with insufficient information to file in a more specific JASC 6100 series code.",
+ "periodicity" : "Once per day",
+ "ataCategory" : "Propeller/rotor (ATA 60-67)",
+ "hangarNeed" : "true", 
+ "duration" : "3",
+ "planeType" : "Boeing 777"
+ }
+ 
+PUT gla/taskgeneric/8
+{
+ "description" : "3130   Data Recorders (Flight/Maintenance) : The unit which continuously records critical flight, aircraft and powerplant system data, such as attitude, air speed, altitude, engine power, etc., to be used in the event of a crash. Includes the system and parts that provide a source of power and inputs, from various sources critical to flight, to flight data recorder. Typical parts are spool rod, magazine, etc.",
+ "periodicity" : "Each flight",
+ "ataCategory" : "Aircraft General (ATA 00-18)",
+ "hangarNeed" : "false",
+ "duration" : "1",
+ "planeType" : "Boeing 777"
+}
+
+PUT gla/taskgeneric/9
+{
+ "description" : "2100   Air Conditioning System : For miscellaneous parts that cannot be associated with specific air conditioning, pressurization, or distribution codes. Examples are lines, hoses, etc., with no reference to the specific using system on the incoming report. Also, for those units and components furnishing a means of pressurizing, heating, cooling, moisture controlling, filtering, and treating the air used to ventilate areas of the fuselage within the pressure vessel.",
+ "periodicity" : "Each flight",
+ "ataCategory" : "Airframe systems (ATA 20-50)",
+ "hangarNeed" : "true",
+ "duration" : "0.5",
+ "planeType" : "Canadair RJ 1000"
+}
+
+PUT gla/taskgeneric/10
+{
+ "description" : "5101   Aircraft Structures : For reports of aircraft structural problems of a general nature which affects two or more areas. Includes reports of lightning strikes which cannot be associated with a specific JASC code.",
+ "periodicity" : "Every week",
+ "ataCategory" : "Structure (ATA 51-57)",
+ "hangarNeed" : "true",
+ "duration" : "1",
+ "planeType" : "Canadair RJ 1000"
+}
